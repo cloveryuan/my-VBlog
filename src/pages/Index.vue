@@ -37,7 +37,7 @@ export default {
     }
   },
   methods:{
-    getMD(content){
+    getMD (content){
       const md = new MarkDownIt()
       return md.render(content)
     }
