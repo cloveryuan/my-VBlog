@@ -7,7 +7,7 @@
           :key="item.node.path"
           :index="item.node.path"
         >
-          <g-link :to="'/'+item.node.path">
+          <g-link :to="item.node.path">
             <i :class="item.node.meta.icon"></i>
             <span slot="title">{{ item.node.meta.title }}</span>
           </g-link>
