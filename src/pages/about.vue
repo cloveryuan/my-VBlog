@@ -104,11 +104,11 @@ export default {
     quillEditor
   },
   mounted(){
-    this.onEditorReady()
+    this.$nextTick(()=>this.$util.addQuillTitle())
   },
   methods: {
     onEditorReady(editor) { // 准备编辑器
-      this.$util.addQuillTitle()
+ 
     },
     onEditorBlur(){
       this.$refs.form.validateField('content')
