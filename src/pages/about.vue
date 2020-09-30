@@ -121,7 +121,7 @@ export default {
           try{
             const {data} = await axios({
               method: 'POST',
-              url: 'http://localhost:1337/about-lists',
+              url: this.GRIDSOME_API_URL + '/about-lists',
               data: this.form
             })
             this.$message.success('发送成功，因为是静态博客，自动部署后才会更新数据');
