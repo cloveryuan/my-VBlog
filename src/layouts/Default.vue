@@ -9,8 +9,7 @@
         configguration.backgroundColorRight +
         ');color: ' +
         configguration.fontColor +
-        ';background: url(/banner.jpg) center center'
-      "
+        ';background: url(/banner.jpg) center center'"
     >
       <div style="position: absolute; top: 20px; right: 20px; z-index: 2">
         <el-tooltip
