@@ -55,15 +55,7 @@
         >博客源码</a
       >
     </section>
-    <div
-      style="
-        position: relative;
-        z-index: 2;
-        margin: auto;
-        margin-top: -30px;
-        width: 75rem;
-      "
-    >
+    <div class="wrap_tit" >
       <el-card shadow="never" :body-style="{ padding: '0px' }">
         <el-row>
           <el-col :span="10">
@@ -111,14 +103,7 @@
                   style="width: 100%"
                 ></el-slider>
               </el-col>
-              <el-col
-                :span="6"
-                style="
-                  padding: 9px 0px 0px 10px;
-                  color: #909399;
-                  font-size: 13px;
-                "
-              >
+              <el-col :span="6" style="padding: 9px 0px 0px 10px;color: #909399;font-size: 13px;">
                 {{ $util.formatTime(music.currentTime) }}/{{
                   $util.formatTime(music.maxTime)
                 }}
@@ -129,7 +114,7 @@
               <source src="/xiaona.mp3" type="audio/mpeg" />
             </audio>
             <audio ref="music" loop v-else>
-              <source src="xiaona.mp3"" type="audio/mpeg" />
+              <source src="xiaona.mp3" type="audio/mpeg" />
             </audio>
           </el-col>
           <el-col :span="4" style="text-align: right">
@@ -147,14 +132,7 @@
             <img
               v-popover:bigAvatar
               :src="`${GRIDSOME_API_URL + configguration.avatarUrl.url}`"
-              style="
-                margin-top: 4px;
-                margin-right: 10px;
-                width: 52px;
-                height: 52px;
-                border-radius: 5px;
-                border: 1px solid #ebeef5;
-              "
+              style="margin-top: 4px;margin-right: 10px; width: 52px;height: 52px;border-radius: 5px;border: 1px solid #ebeef5; "
             />
             <el-popover
               ref="bigAvatar"
@@ -359,7 +337,13 @@ export default {
    right: 20px; 
    z-index: 2
 }
-
+.wrap_tit{
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  margin-top: -30px;
+  width: 75rem;
+}
 .project-name {
   font-size: 3.25rem;
   margin-top: 0;
