@@ -11,7 +11,7 @@
         configguration.fontColor +
         ';background: url(/banner.jpg) center center'"
     >
-      <div style="position: absolute; top: 20px; right: 20px; z-index: 2">
+      <div class="wrap_index">
         <el-tooltip
           effect="dark"
           :content="fullButton.full ? '退出' : '全屏'"
@@ -352,6 +352,12 @@ export default {
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957);
+}
+.page-header .wrap_index{
+  position: absolute;
+   top: 20px; 
+   right: 20px; 
+   z-index: 2
 }
 
 .project-name {
