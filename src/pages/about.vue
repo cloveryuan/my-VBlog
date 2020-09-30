@@ -21,14 +21,20 @@
           <el-input v-model="form.title"></el-input>
         </el-form-item>
         <el-form-item label="内容" prop="content">
-          <quill-editor 
+          <!-- <quill-editor 
             v-model="form.content" 
             ref="myQuillEditor" 
             :options="editorOption" 
             @blur="onEditorBlur($event)" 
             @focus="onEditorFocus($event)"
             @change="onEditorChange($event)">
-          </quill-editor>
+          </quill-editor> -->
+          <el-input
+            type="textarea"
+            :rows="2"
+            placeholder="请输入内容"
+            v-model="form.content">
+          </el-input>
         </el-form-item>
       </el-form>
       <p style="position:absolute;top:-80px;right:0;">
@@ -64,10 +70,10 @@ query($page:Int){
 <script>
 import tool from "../mixin/tool"
 import { Pager } from 'gridsome'
-import { quillEditor } from "vue-quill-editor"
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+// import { quillEditor } from "vue-quill-editor"
+// import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.snow.css'
+// import 'quill/dist/quill.bubble.css'
 import axios from "axios"
 export default {
   name: 'aboutpage',
@@ -101,7 +107,7 @@ export default {
   },
   components: {
     Pager,
-    quillEditor
+    // quillEditor
   },
   mounted(){
     // this.$nextTick(()=>this.$util.addQuillTitle())
