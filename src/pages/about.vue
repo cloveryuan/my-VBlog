@@ -104,7 +104,7 @@ export default {
     quillEditor
   },
   mounted(){
-    this.$nextTick(()=>this.$util.addQuillTitle())
+    // this.$nextTick(()=>this.$util.addQuillTitle())
   },
   methods: {
     onEditorReady(editor) { // 准备编辑器
