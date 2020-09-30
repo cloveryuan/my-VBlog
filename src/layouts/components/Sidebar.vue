@@ -9,6 +9,7 @@
         >
           <g-link :to="item.node.path?'/'+item.node.path:'/'">
             <i :class="item.node.meta.icon"></i>
+            {{item.node.path}}防护乳
             <span slot="title">{{ item.node.meta.title }}</span>
           </g-link>
         </el-menu-item>
