@@ -47,7 +47,8 @@ export default {
   },
   mounted() {
     let arr = this.$route.path.split("/")
-    this.active = "/" + arr[1] + "/" + arr[2]
+    console.log(arr)
+    this.active = arr.length>1?"/" + arr[1] + "/" + arr[2]:"/" + arr[1]
   }
 }
 </script>

@@ -127,10 +127,10 @@
             </el-row>
 
             <audio ref="music" loop autoplay v-if="configguration.audioAutoPlay">
-              <source :src="`${GRIDSOME_API_URL + configguration.audioUrl.url}`" type="audio/mpeg" />
+              <source src="/xiaona.mp3" type="audio/mpeg" />
             </audio>
             <audio ref="music" loop v-else>
-              <source :src="`${GRIDSOME_API_URL + configguration.audioUrl.url}`" type="audio/mpeg" />
+              <source src="xiaona.mp3"" type="audio/mpeg" />
             </audio>
           </el-col>
           <el-col :span="4" style="text-align: right">
@@ -207,9 +207,6 @@ query {
     name
     blog
   	mini
-    audioUrl{
-      url
-    }
     avatarUrl{
       url
     }
