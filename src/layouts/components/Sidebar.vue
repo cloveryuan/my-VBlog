@@ -27,7 +27,7 @@ export default {
           id: 0,
           path: "/",
           meta: {
-            name: "最新动态",
+            title: "最新动态",
             icon: "el-icon-star-off",
           },
         },
@@ -35,7 +35,7 @@ export default {
           id: 1,
           path: "/about",
           meta: {
-            name: "社交圈",
+            title: "社交圈",
             icon: "el-icon-mobile-phone",
           },
         },
@@ -43,7 +43,7 @@ export default {
           id: 2,
           path: "/list",
           meta: {
-            name: "博客列表",
+            title: "博客列表",
             icon: "el-icon-edit-outline",
           },
         },
@@ -51,7 +51,7 @@ export default {
           id: 3,
           path: "/project",
           meta: {
-            name: "开源项目",
+            title: "开源项目",
             icon: "el-icon-service",
           },
         },
@@ -60,8 +60,7 @@ export default {
   },
   mounted() {
     let arr = this.$route.path.split("/");
-    console.log(arr);
-    this.active = arr.length > 1 ? "/" + arr[1] + "/" + arr[2] : "/" + arr[1];
+    this.active = "/" + arr[1] + "/" + arr[2] ;
   },
 };
 </script>
